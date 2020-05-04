@@ -12,13 +12,18 @@
     <form th:action="@{/validator}" th:object="${producto}" method="post">
 
         <label for="codProduct">Codigo: </label><input type="text" th:field="*{codProduct}" placeholder="Ingresa el codigo">
+        <br><span th:errors="*{codProduct}" style="color:red"></span><br>
         <label for="nomProduct">Nombre: </label><input type="text" th:field="*{nomProduct}" placeholder="Ingresa el nombre">
+        <br><span th:errors="*{nomProduct}" style="color:red"></span><br>
         <label for="marca">Marca: </label><input type="text" th:field="*{marca}" placeholder="Ingresa la marca">
+        <br><span th:errors="*{marca}" style="color:red"></span><br>
         <label for="desc">Descripcion: </label><textarea th:field="*{desc}" placeholder="Agrega una breve descripcion" cols="20" rows="10"></textarea>
+        <br><span th:errors="*{desc}" style="color:red"></span><br>
         <label for="enExist">Cantidad: </label><input type="text" th:field="*{enExist}" placeholder="Ingresa la cantidad">
+        <br><span th:errors="*{enExist}" style="color:red"></span><br>
         <label for="ingreso">Fecha: </label><input type="text" th:field="*{ingreso}" placeholder="dd/mm/yyyy">
+        <br><span th:errors="*{ingreso}" style="color:red"></span><br>
         <input type="submit" value="Agregar">
-
     </form>
 </body>
 </html>

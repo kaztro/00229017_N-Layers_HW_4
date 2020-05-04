@@ -24,10 +24,10 @@ public class ProductoController {
 	}
 	
 	@RequestMapping("/validator")
-	public ModelAndView procesar(@Valid @ModelAttribute Producto producto, BindingResult bRes) {
+	public ModelAndView validar(@Valid @ModelAttribute Producto producto, BindingResult bRes) {
 		ModelAndView mav = new ModelAndView();
 		
-		if(bRes.hasErrors()) { mav.setViewName("index"); }
+		if(bRes.hasErrors()) { mav.setViewName("productos"); }
 		else {
 			producto.getEnExist();
 			mav.setViewName("validator");

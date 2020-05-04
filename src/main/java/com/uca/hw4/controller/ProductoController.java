@@ -17,7 +17,7 @@ public class ProductoController {
 	public ModelAndView producto() {
 		ModelAndView mav = new ModelAndView();
 		
-		mav.setViewName("index");
+		mav.setViewName("productos");
 		mav.addObject("producto", new Producto());
 		
 		return mav;

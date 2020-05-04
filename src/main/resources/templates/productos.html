@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de productos</title>
+</head>
+
+<body>
+    <h1>Ingresa los datos del form.</h1>
+
+    <form th:action="@{/validator}" th:object="${producto}" method="post">
+
+        <label for="codProduct">Codigo: </label><input type="text" th:field="*{codProduct}" placeholder="Ingresa el codigo">
+        <label for="nomProduct">Nombre: </label><input type="text" th:field="*{nomProduct}" placeholder="Ingresa el nombre">
+        <label for="marca">Marca: </label><input type="text" th:field="*{marca}" placeholder="Ingresa la marca">
+        <label for="desc">Descripcion: </label><textarea th:field="*{desc}" placeholder="Agrega una breve descripcion" cols="20" rows="10"></textarea>
+        <label for="enExist">Cantidad: </label><input type="text" th:field="*{enExist}" placeholder="Ingresa la cantidad">
+        <label for="ingreso">Fecha: </label><input type="text" th:field="*{ingreso}" placeholder="dd/mm/yyyy">
+        <input type="submit" value="Agregar">
+
+    </form>
+</body>
+</html>
